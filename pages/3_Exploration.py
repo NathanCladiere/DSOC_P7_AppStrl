@@ -7,7 +7,7 @@ import plotly.express as px
 st.set_page_config(page_title="Exploration",layout="wide")
 
 # Define the location of the FastAPI server
-FASTAPI_SERVER = 'http://localhost:8000'
+FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 
 st.markdown("<h1 style='text-align: center;'>Exploration</h1>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)

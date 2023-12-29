@@ -4,7 +4,7 @@ import requests
 
 
 
-FASTAPI_SERVER = 'http://localhost:8000'
+FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 
 # Fonction pour récupérer l'image de l'API
 def get_image_from_api(image_name):

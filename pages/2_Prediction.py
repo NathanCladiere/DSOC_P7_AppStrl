@@ -7,7 +7,7 @@ import base64
 st.set_page_config(page_title="Prediction",layout="wide")
 
 # Define the location of the FastAPI server
-FASTAPI_SERVER = 'http://localhost:8000'
+FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 
 st.markdown("<h1 style='text-align: center;'>Loan eligibilty</h1>", unsafe_allow_html=True)
 
