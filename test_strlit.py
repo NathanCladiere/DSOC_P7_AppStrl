@@ -1,6 +1,7 @@
 import pytest
 import requests
-from your_streamlit_app import get_image_from_api, get_client_address, predict_for_client
+from Bienvenue import get_image_from_api
+from Prediction import get_client_address, predict_for_client
 
 # Constantes pour les tests
 FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
