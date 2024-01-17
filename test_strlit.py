@@ -1,12 +1,12 @@
 import pytest
 import requests
 from Bienvenue import get_image_from_api
-from pages.2_Prediction import get_client_address, predict_for_client
+from pages.Prediction import get_client_address, predict_for_client
 
 # Constantes pour les tests
 FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 TEST_IMAGE_NAME = 'PAYMENT_RATE_kde'
-TEST_CLIENT_ID = 100042  # Remplacez par un ID client valide pour les tests
+TEST_CLIENT_ID = 100042  # Remsplacez par un ID client valide pour les tests
 
 def test_get_image_from_api():
     response = get_image_from_api(TEST_IMAGE_NAME)
