@@ -21,4 +21,4 @@ xgboost==1.7.4
 flake8==7.0.0 
 pytest==7.4.4
 httpx==0.23.2
-unittest==3.12
+unittest==3.1
