@@ -67,8 +67,7 @@ if 'global_image' not in st.session_state:
     st.session_state['global_image'] = None
 if 'lime_importance_plot' not in st.session_state:
     st.session_state['lime_importance_plot'] = None
-if 'eligibility_message' not in st.session_state:
-    st.session_state.eligibility_message = ''
+
 
 with st.sidebar:
     st.header("Features")

@@ -1,12 +1,21 @@
+from unittest.mock import patch
 import pytest
 import requests
 from Bienvenue import get_image_from_api
 from pages.Prediction import get_client_address, predict_for_client
 
+
+
 # Constantes pour les tests
 FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 TEST_IMAGE_NAME = 'PAYMENT_RATE_kde'
 TEST_CLIENT_ID = 100042  # Remsplacez par un ID client valide pour les tests
+
+@pytest.fixture(autouse=True)
+def mock_st_session_state():
+    with patch('streamlit.session_state', new_callable=dict):
+        yield
+
 
 def test_get_image_from_api():
     response = get_image_from_api(TEST_IMAGE_NAME)
