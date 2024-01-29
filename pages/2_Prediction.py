@@ -114,6 +114,9 @@ if client_id:
                     not_allowed_position = 25 - (len("Loan Available") / 2)  # ajuster en fonction de la longueur du texte
                     loan_available_position = 75 - (len("Not Allowed") / 2)  # ajuster en fonction de la longueur du texte
 
+                    # Définir la couleur en fonction de score_percentage
+                    fill_color = "#76b900" if score_percentage <= 50 else "#ff0000"  # Vert si 50% ou moins, Rouge sinon
+
                     # Utilisation de HTML/CSS pour créer la barre de progression personnalisée
                     progress_bar_html = f"""
                     <style>
@@ -128,7 +131,7 @@ if client_id:
 
                     .progress-bar-fill {{
                     width: {score_percentage}%;
-                    background-color: #76b900;
+                    background-color: {fill_color};
                     height: 20px;
                     position: absolute;
                     z-index: 1;

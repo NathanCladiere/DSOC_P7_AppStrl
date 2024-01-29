@@ -37,7 +37,7 @@ with st.spinner('Loading...'):
     # Récupère les données
     data = get_data()
     df = pd.DataFrame(data['data_viz'])
-    df['Prediction'] = df['Prediction'].map({"0": 'Not Eligible', "1": 'Eligible'})
+    df['Prediction'] = df['Prediction'].map({"0": 'Eligible', "1": 'Not eligible'})
     variables = data['list_var']
 
     # Sélection des variables pour les axes x et y
