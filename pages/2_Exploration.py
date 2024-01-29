@@ -6,14 +6,14 @@ import plotly.express as px
 
 st.set_page_config(page_title="Exploration",layout="wide")
 
-# Define the location of the FastAPI server
+# Serveur fastAPI
 FASTAPI_SERVER = 'https://dsoc-p7-api-019616fdcaac.herokuapp.com'
 
 st.markdown("<h1 style='text-align: center;'>Exploration</h1>", unsafe_allow_html=True)
 col1, col2, col3 = st.columns(3)
 
-
-# Récupérez la liste des variables et les données pour la visualisation
+# Récupère les out de l'API
+# liste des variables et les données pour la visualisation
 @st.cache_data
 def get_data():
     response = requests.get(f'{FASTAPI_SERVER}/prediction_for_all')
@@ -23,7 +23,7 @@ def get_data():
         st.error('Failed to retrieve data')
         return {}
     
-# Function to get the list of client IDs
+# liste des clients
 @st.cache_data
 def get_client_list():
     response = requests.get(f'{FASTAPI_SERVER}/list_client')
@@ -34,7 +34,7 @@ def get_client_list():
         return []
     
 with st.spinner('Loading...'):
-    # Récupérer les données
+    # Récupère les données
     data = get_data()
     df = pd.DataFrame(data['data_viz'])
     df['Prediction'] = df['Prediction'].map({"0": 'Not Eligible', "1": 'Eligible'})
@@ -51,7 +51,7 @@ with st.spinner('Loading...'):
         client_id = st.selectbox('Select a Client ID:', get_client_list())
 
 if st.button('Visualization'):
-    # Créer le scatter plot avec Plotly
+    # Crée le scatter plot avec Plotly
     client_id = str(client_id)
     if x_var and y_var:
         # Création du scatter plot
