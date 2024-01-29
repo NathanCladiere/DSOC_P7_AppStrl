@@ -161,8 +161,8 @@ if client_id:
                     <div class="progress-bar-grey-zone"></div>
                     </div>
                     <div class="progress-bar-labels">
-                    <span style="position: absolute; left: 0%;">Not Allowed</span>
-                    <span style="position: absolute; right: 0%;">Loan Available</span>
+                    <span style="position: absolute; left: 0%;">Loan Available</span>
+                    <span style="position: absolute; right: 0%;">Not Allowed</span>
                     </div>
                     """
 
@@ -181,9 +181,9 @@ with col1:
     # Affiche le message d'éligibilité
     if st.session_state.eligibility_message:
         if "not" in st.session_state.eligibility_message:
-            st.success(st.session_state.eligibility_message)
+            st.error(st.session_state.eligibility_message)
         else:
-            st.error(st.session_state.eligibility_message) 
+            st.success(st.session_state.eligibility_message) 
     # Affiche la barre de progression       
     if st.session_state.right_score:
         st.markdown(st.session_state.right_score, unsafe_allow_html=True)
