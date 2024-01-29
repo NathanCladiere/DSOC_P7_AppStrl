@@ -6,3 +6,5 @@ Le folder pages contient les pages supplémentaires
 runtime: fichier spécifiant le langage de code  
 requirement: les bibliothèques requises  
 procfile: fichier pour le dépoiement sur heroku  
+setup: configuration pour streamlit
+workflow: test unitaire à chaque push   
