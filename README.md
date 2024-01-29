@@ -1,4 +1,4 @@
-Folder pour la mise ne ligne du dashboard (P7 OC Datascience)  
+Folder pour la mise en ligne du dashboard (P7 OC Datascience)  
   
 Bienvenue.py est le fichier prncipale pour streamlit  
 Le folder pages contient les pages supplémentaires  
